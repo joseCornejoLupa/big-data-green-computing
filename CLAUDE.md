@@ -84,3 +84,5 @@ Esto lanza en orden: Syncthing → Zotero → Obsidian (vault `./obsidian/`) y m
 - Al generar código de análisis, usar pandas + matplotlib como base
 - Las citas académicas siguen formato IEEE
 - Antes de sugerir una nueva herramienta, verificar si ya existe en el stack
+
+<!-- workflow: cambios via PR, nunca push directo a main -->
