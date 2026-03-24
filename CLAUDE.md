@@ -1,0 +1,59 @@
+# Investigación: Big Data + Green Computing
+
+## Directorio del proyecto
+`./` (raíz del repositorio)
+
+## Objetivo de la investigación
+Explorar la intersección entre arquitecturas de Big Data y Green Computing, con el fin de identificar, medir y optimizar el consumo energético en pipelines de procesamiento de datos distribuidos.
+
+## Pregunta de investigación (en definición)
+¿Cómo pueden las arquitecturas de Big Data modernas reducir su huella energética sin comprometer el rendimiento de procesamiento?
+
+## Variables de estudio
+- **Independientes:** arquitectura de procesamiento (Spark, Flink, etc.), configuración de cluster, tamaño de dataset
+- **Dependientes:** consumo energético (W/job), emisiones de CO₂ equivalente, tiempo de procesamiento
+- **Control:** hardware homogéneo, temperatura ambiente, carga de red
+
+## Métricas clave
+| Métrica | Descripción | Herramienta de medición |
+|---|---|---|
+| PUE | Power Usage Effectiveness | Monitoreo de datacenter |
+| Energía/job | Watios consumidos por tarea | RAPL, Scaphandre |
+| CO₂ eq. | Emisiones equivalentes | codecarbon (Python) |
+| Throughput | Registros procesados/segundo | Spark UI, métricas nativas |
+
+## Stack tecnológico
+- **Procesamiento:** Apache Spark / Apache Flink
+- **Medición energética:** Scaphandre, Intel RAPL, `perf`
+- **Análisis:** Python (Jupyter), pandas, matplotlib
+- **Gestión de papers:** Zotero
+- **Síntesis de literatura:** Claude Projects (claude.ai), NotebookLM
+- **Notas:** Obsidian (`./obsidian/`)
+- **Escritura académica:** Overleaf (LaTeX)
+
+## Estructura del proyecto
+```
+big data/
+├── CLAUDE.md               ← este archivo
+├── obsidian/               ← vault Obsidian (notas de investigación)
+│   ├── papers/             ← notas de papers leídos
+│   ├── ideas/              ← hipótesis, borradores, reflexiones
+│   └── experimentos/       ← diseño y registro de experimentos
+├── notebooks/              ← Jupyter notebooks de análisis
+├── data/                   ← datasets (raw y procesados)
+├── experiments/            ← código de experimentos reproducibles
+└── docs/                   ← reportes, borradores de artículo
+```
+
+## Sincronización entre dispositivos
+- **Linux/Windows → Android:** Syncthing apuntando a este directorio
+- **Claude Code (CLI):** usa este CLAUDE.md como contexto en cada sesión
+- **Claude.ai / móvil:** subir este CLAUDE.md + notas clave al Claude Project
+
+## Instrucciones para Claude Code
+- El idioma de trabajo es español
+- Priorizar reproducibilidad en todos los experimentos (seeds fijos, entornos documentados)
+- Toda medición energética debe especificar las condiciones del hardware
+- Al generar código de análisis, usar pandas + matplotlib como base
+- Las citas académicas siguen formato IEEE
+- Antes de sugerir una nueva herramienta, verificar si ya existe en el stack

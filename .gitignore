@@ -1,0 +1,59 @@
+# === Claude CLI ===
+.claude/
+
+# === Entornos virtuales Python ===
+venv/
+env/
+.venv/
+
+# === Caché Python ===
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# === Jupyter ===
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# === Archivos de sistema ===
+.DS_Store
+Thumbs.db
+
+# === Datos grandes / sensibles ===
+data/raw/
+*.csv
+*.parquet
+*.h5
+*.hdf5
+*.feather
+*.pkl
+*.pickle
+
+# === Obsidian (configuración local del workspace) ===
+obsidian/.obsidian/
+
+# === Logs ===
+*.log
+
+# === Variables de entorno ===
+*.env
+.env
+.env*
+!.env.example
+
+# === Syncthing ===
+.stfolder/
+.stignore
+
+# === Editores / IDEs ===
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# === Distribución Python ===
+dist/
+build/
+*.egg-info/
