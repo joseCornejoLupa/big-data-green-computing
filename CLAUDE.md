@@ -50,6 +50,33 @@ big data/
 - **Claude Code (CLI):** usa este CLAUDE.md como contexto en cada sesión
 - **Claude.ai / móvil:** subir este CLAUDE.md + notas clave al Claude Project
 
+## Modo Investigador
+
+Para iniciar una sesión de investigación ejecutar:
+```bash
+./start-research.sh
+```
+
+Esto lanza en orden: Syncthing → Zotero → Obsidian (vault `./obsidian/`) y muestra el flujo de trabajo.
+
+### Flujo de investigación
+```
+🔍 Encuentras paper  →  Semantic Scholar / Connected Papers
+        ↓
+📚 Agrégalo a Zotero  ←  fuente principal, citas, metadata
+        ↓
+🤖 Sube el PDF        ←  NotebookLM (consultas exactas, sin alucinaciones)
+        ↓
+📝 Nota resumen       ←  Obsidian en obsidian/papers/
+        ↓
+🧠 Sube nota o PDF    ←  Claude Project (análisis profundo y síntesis)
+```
+
+### Foco actual de investigación
+- **Área:** Energy-aware scheduling en Kubernetes
+- **Pregunta tentativa:** ¿Cómo puede el scheduler de K8s optimizarse para reducir el consumo energético en workloads de Big Data sin degradar el rendimiento?
+- **Baseline disponible:** datos experimentales en `../microservices/historyexecutions/`
+
 ## Instrucciones para Claude Code
 - El idioma de trabajo es español
 - Priorizar reproducibilidad en todos los experimentos (seeds fijos, entornos documentados)
