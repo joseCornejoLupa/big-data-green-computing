@@ -77,6 +77,13 @@ Esto lanza en orden: Syncthing → Zotero → Obsidian (vault `./obsidian/`) y m
 - **Pregunta tentativa:** ¿Cómo puede el scheduler de K8s optimizarse para reducir el consumo energético en workloads de Big Data sin degradar el rendimiento?
 - **Baseline disponible:** datos experimentales en `../microservices/historyexecutions/`
 
+### Vault Obsidian — estado actual
+- `obsidian/papers/survey-k8s-scheduling.md` — índice del primer survey procesado
+- `obsidian/papers/plantilla-analisis-paper.md` — plantilla reutilizable para nuevos papers
+- `obsidian/conceptos/` — interferencia entre nodos, eficiencia energética CPU vs GPU
+- `obsidian/ideas/direcciones-futuras-k8s.md` — gaps y preguntas abiertas
+- Papers clave identificados: KEIDS, KCSS, Kube-Knots, Townend et al.
+
 ## Instrucciones para Claude Code
 - El idioma de trabajo es español
 - Priorizar reproducibilidad en todos los experimentos (seeds fijos, entornos documentados)
