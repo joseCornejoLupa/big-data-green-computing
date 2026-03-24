@@ -40,12 +40,27 @@ sleep 2
 echo "  ✓ Obsidian lanzado → $OBSIDIAN_VAULT"
 
 # ============================================================
+# Citas dinámicas — se elige una al azar en cada ejecución
+CITAS=(
+    "\"El Kwisatz Haderach no nació sabiendo. Leyó. Observó.\n   Conectó lo que nadie más se atrevía a conectar.\"\n                                        — Bene Gesserit, Dune"
+    "\"El miedo es el asesino de la mente. Afrontaré mi miedo.\n   Que pase sobre mí y a través de mí. Solo yo permaneceré.\"\n                              — Letanía contra el Miedo, Dune"
+    "\"Quien controla la especia, controla el universo.\n   Quien controla los datos, controla el conocimiento.\"\n                                    — Paul Muad'Dib, Dune"
+    "\"No hay fin al aprendizaje. Solo hay distintos niveles\n   de comprensión.\"\n                                  — Lady Jessica, Dune"
+    "\"La Fuerza no te dará respuestas. Solo la disciplina\n   y el estudio revelan los patrones ocultos.\"\n                                   — Maestro Yoda, Star Wars"
+    "\"Trata de no hacerlo. Hazlo, o no lo hagas.\n   No existe el intentar.\"\n                                   — Maestro Yoda, Star Wars"
+    "\"Un Jedi no actúa por gloria. Actúa porque comprende\n   mejor que nadie las consecuencias de no actuar.\"\n                                  — Obi-Wan Kenobi, Star Wars"
+    "\"No es el poder del Anillo lo que importa, sino\n   la sabiduría de quien lo estudia.\"\n                                        — Gandalf, LOTR"
+    "\"Incluso el más pequeño de los seres puede cambiar\n   el curso del futuro.\"\n                                        — Gandalf, LOTR"
+    "\"No toda la oscuridad es maldad. No toda la luz\n   es sabiduría. Distinguirlas requiere estudio.\"\n                                     — Galadriel, LOTR"
+)
+
+INDICE=$(( RANDOM % ${#CITAS[@]} ))
+CITA_ELEGIDA="${CITAS[$INDICE]}"
+
 echo ""
 echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 echo ""
-echo "  \"El Kwisatz Haderach no nació sabiendo. Leyó. Observó."
-echo "   Conectó lo que nadie más se atrevía a conectar.\""
-echo "                                        — Bene Gesserit"
+echo -e "  $CITA_ELEGIDA"
 echo ""
 echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 echo ""
@@ -62,11 +77,6 @@ echo "      │"
 echo "  🧠 5. Sube nota o PDF     →  Claude Project (análisis profundo)"
 echo ""
 echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-echo ""
-echo "  \"El miedo es el asesino de la mente. El miedo es la pequeña"
-echo "   muerte. Afrontaré mi miedo. Que pase sobre mí y a través"
-echo "   de mí. Solo yo permaneceré.\""
-echo "                         — Letanía contra el Miedo, Dune"
 echo ""
 echo "  Que la investigación comience. La especia debe fluir. 🌊"
 echo ""
